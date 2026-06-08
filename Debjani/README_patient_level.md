@@ -103,7 +103,7 @@ I used 5-fold stratified cross-validation because the dataset is small.
 Main Broad cohort results:
 
 | Model | Balanced accuracy | ROC-AUC | F1 |
-|---|---:|---:|---:|
+|---    |---               |---       |---|
 | Dummy baseline | 0.500 | 0.500 | 0.256 |
 | Logistic regression | 0.653 | 0.664 | 0.667 |
 | Random forest | 0.676 | 0.757 | 0.650 |
@@ -180,7 +180,7 @@ SMOTE did not meaningfully improve the result.
 
 If asked, my explanation is:
 
-I used SMOTE only inside cross validation training folds, not on the full dataset before splitting. I will claim that SMOTE creates real new patients.
+I used SMOTE only inside cross validation training folds, not on the full dataset before splitting. I will not claim that SMOTE creates real new patients. The synthetic rows are interpolations between existing patients, not real clinical data. That is why I only used them inside training folds and never as the main evidence.
 
 ### 8. Mexico benchmark
 
